@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bvg.css">
+    <title>Личный кабинет кота</title>
+</head>
+<body>
+    <div id="circle"></div>
+    <main>
+        <section class="profile">
+            <h2>Профиль вашего кота</h2>
+            <img src="https://koshka.top/uploads/posts/2021-11/thumbs/1637845853_11-koshka-top-p-samie-klassnie-koshki-11.jpg" alt="Фото кота" class="cat-image">
+            <p><strong>Имя:</strong> Шарик</p>
+            <p><strong>Возраст:</strong> 2 года</p>
+            <p><strong>Любимые игрушки:</strong> Носок, Вещи на столе</p>
+            <h2>Активности</h2>
+            <ul>
+                <li>Сон на подушке хозяина</li>
+                <li>Скидывание предметов со стола</li>
+                <li>Прогулка на балконе</li>
+            </ul>   
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Личный кабинет кота</p>
+    </footer>
+    <header>
+        <nav class="transparent-menu">
+            <ul>
+                <li><a href="avt.html">Регистрация</a></li>
+                <li><a href="tex.html">Услуги</a></li>
+                <li><a href="bvg.html">Личный кабинет</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const catImage = document.querySelector('.cat-image');
+            const profileSection = document.querySelector('.profile');
+
+            // Добавляем эффект при скролле
+            window.addEventListener("scroll", function () {
+                const profilePosition = profileSection.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.5;
+
+                if (profilePosition < screenPosition) {
+                    profileSection.style.animation = "fadeInUp 1.5s forwards";
+                }
+            });
+
+            // Добавляем интерактивность для изображения кота
+            catImage.addEventListener('mouseover', function () {
+                catImage.style.transform = 'scale(1.1)';
+                catImage.style.transition = 'transform 0.3s ease';
+            });
+
+            catImage.addEventListener('mouseout', function () {
+                catImage.style.transform = 'scale(1)';
+            });
+        });
+        const circle = document.getElementById("circle");
+
+document.addEventListener("mousemove", (e) => {
+  circle.style.left = e.clientX - 10 + "px";
+  circle.style.top = e.clientY - 10 + "px";
+});
+const numSnowflakes = 100;
+
+for (let i = 0; i < numSnowflakes; i++) {
+  const snowflake = document.createElement("div");
+  snowflake.classList.add("snowflake");
+  snowflake.style.left = Math.random() * 100 + "vw";
+  snowflake.style.animationDelay = Math.random() * 5 + "s";
+  document.body.appendChild(snowflake);
+}
+    </script>
+
+
+</body>
+</html>

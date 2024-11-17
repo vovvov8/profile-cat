@@ -1,0 +1,288 @@
+body {
+    background-image: url('https://avatars.dzeninfra.ru/get-zen_doc/1581245/pub_63a5f1939397281caa01741b_63ceb313e6882624774c45ae/scale_1200'); 
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.registration-panel {
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px; 
+    padding: 20px;
+    max-width: 300px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    opacity: 0.9; 
+}
+
+.registration-panel h2 {
+    margin: 0 0 15px;
+}
+
+.registration-panel form {
+    display: flex;
+    flex-direction: column;
+}
+
+.registration-panel label {
+    margin-bottom: 5px;
+}
+
+.registration-panel input {
+    margin-bottom: 15px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+}
+
+.registration-panel button {
+    padding: 10px;
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.registration-panel button:hover {
+    background-color: #0056b3; 
+}
+.header {
+    position: absolute;
+}
+
+.transparent-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+  
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.transparent-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.transparent-menu li {
+    margin-left: 15px;
+}
+
+.transparent-menu a {
+    text-decoration: none;
+    color: #000; 
+    padding: 8px 12px;
+    transition: background 0.3s ease;
+}
+
+.transparent-menu a:hover {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 3px;
+}
+header {
+    background-color: rgba(0, 0, 0, 0.8); 
+    border-radius: 10px; 
+    padding: 20px;
+    max-width: 300px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    opacity: 0.9; 
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Основной стиль меню */
+.transparent-menu {
+  
+    transition: transform 0.5s ease-in-out, background 0.3s ease; /* Анимация */
+}
+
+.transparent-menu.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(0); /* Появление */
+}
+
+.transparent-menu.hidden {
+    transform: translateY(-100%); /* Скрытие */
+}
+
+/* Анимация панели регистрации */
+.registration-panel {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideIn 1s forwards; /* Анимация появления */
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Анимация кнопки */
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Увеличение при наведении */
+}
+
+/* Стили ссылок в меню */
+.transparent-menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+/* Плавное появление футера */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    animation: fadeIn 2s ease-in-out;
+}
+.transparent-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    animation: slideInMenu 1s forwards; /* Плавное появление меню */
+}
+
+.transparent-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.transparent-menu li {
+    margin-left: 15px;
+}
+
+.transparent-menu a {
+    text-decoration: none;
+    color: #000;
+    padding: 8px 12px;
+    transition: background 0.3s ease;
+}
+
+.transparent-menu a:hover {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 3px;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInMenu {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+#circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(0, 234, 255);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  body {
+    background-color: #000;
+    overflow: hidden;
+  }
+  
+  .snowflake {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: fall 5s linear infinite;
+    transform: translate(-50%, -50%);
+  }
+  
+  @keyframes fall {
+    0% {
+      top: -10px;
+    }
+    100% {
+      top: 100vh;
+    }
+  }

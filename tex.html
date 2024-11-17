@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добро пожаловать на сайт регистрации котов</title>
+    <style>
+        body {
+            background-image: url('https://avatars.dzeninfra.ru/get-zen_doc/1581245/pub_63a5f1939397281caa01741b_63ceb313e6882624774c45ae/scale_1200'); /* Замените на свой фон */
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow-x: hidden; /* Предотвращает горизонтальную прокрутку */
+        }
+
+        .container {
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: left;
+            opacity: 0; /* Изначально скрыто */
+            animation: fadeIn 1.5s forwards; /* Плавное появление */
+        }
+
+        h1 {
+            color: #000000c1;
+            text-align: center;
+            font-size: 24px;
+            animation: slideIn 1s ease-out; /* Анимация для заголовка */
+        }
+
+        h2 {
+            color: #000000;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 15px;
+            border-radius: 5px;
+            opacity: 0; /* Изначально скрыто */
+            animation: fadeInUp 0.5s forwards; /* Плавное появление с движением */
+            animation-delay: 0.5s;
+        }
+
+        li:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        li:nth-child(3) {
+            animation-delay: 1.5s;
+        }
+
+        li:nth-child(4) {
+            animation-delay: 2s;
+        }
+
+        li:nth-child(5) {
+            animation-delay: 2.5s;
+        }
+
+        li:nth-child(6) {
+            animation-delay: 3s;
+        }
+
+        li:nth-child(7) {
+            animation-delay: 3.5s;
+        }
+
+        li:nth-child(8) {
+            animation-delay: 4s;
+        }
+
+        strong {
+            color: #000000;
+        }
+
+        .header {
+            position: relative;
+        }
+
+        .transparent-menu {
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            animation: slideInMenu 1s forwards; /* Плавное появление меню */
+        }
+
+        .transparent-menu ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .transparent-menu li {
+            margin-left: 15px;
+        }
+
+        .transparent-menu a {
+            text-decoration: none;
+            color: #000;
+            padding: 8px 12px;
+            transition: background 0.3s ease;
+        }
+
+        .transparent-menu a:hover {
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 3px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Анимации */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideInMenu {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        #circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgb(0, 234, 255);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  body {
+  background-color: #000;
+  overflow: hidden;
+}
+
+.snowflake {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    top: -10px;
+  }
+  100% {
+    top: 100vh;
+  }
+}
+    </style>
+</head>
+<body>
+    <div id="circle"></div>
+    <div class="container">
+        <h1>Добро пожаловать на наш сайт регистрации котов!</h1>
+        <h3>Мы предоставляем широкий спектр услуг для владельцев котов:</h3>
+        <ul>
+            <li><strong>Регистрация кота:</strong> Удобный и быстрый процесс регистрации вашего любимца, включая создание личного профиля с фото и информацией о питомце.</li>
+            <li><strong>Услуги по уходу:</strong> Информация о груминге, вета-сервисах, кормлении и рекомендациях по здоровью.</li>
+            <li><strong>Социальная сеть для котов:</strong> Возможность общения с другими владельцами котов, обмен опытом и советами.</li>
+            <li><strong>Питомцевед:</strong> Советы по выбору породы и информации о характере и привычках различных котов.</li>
+            <li><strong>Блог и статьи:</strong> Полезные статьи о поведении, тренировке и воспитании котов, новостях и событиях в мире животных.</li>
+            <li><strong>События и встречи:</strong> Информация о выставках, конкурсах и мероприятиях для котов и их владельцев, включая возможность участия.</li>
+            <li><strong>Рынок товаров для котов:</strong> Рекомендации по покупкам, включая корма, игрушки и аксессуары.</li>
+            <li><strong>Служба поддержки:</strong> Консультации с ветеринарами и экспертами по уходу за котами.</li>
+        </ul>
+    </div>
+    <footer>
+        <p>© 2024 Личный кабинет кота</p>
+    </footer>
+    <header>
+        <nav class="transparent-menu">
+            <ul>
+                <li><a href="avt.html">Регистрация</a></li>
+                <li><a href="tex.html">Услуги</a></li>
+                <li><a href="bvg.html">Личный кабинет</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        const circle = document.getElementById("circle");
+
+document.addEventListener("mousemove", (e) => {
+  circle.style.left = e.clientX - 10 + "px";
+  circle.style.top = e.clientY - 10 + "px";
+});
+const numSnowflakes = 100;
+
+for (let i = 0; i < numSnowflakes; i++) {
+  const snowflake = document.createElement("div");
+  snowflake.classList.add("snowflake");
+  snowflake.style.left = Math.random() * 100 + "vw";
+  snowflake.style.animationDelay = Math.random() * 5 + "s";
+  document.body.appendChild(snowflake);
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+    <!DOCTYPE html>
+    <html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Регистрация</title>
+        <link rel="stylesheet" href="avt.css">
+    </head>
+    <body>
+        <div class="registration-panel">
+            <h2>Регистрация</h2>
+            <form>
+                <label for="username">Имя пользователя:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Пароль:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+        <div id="circle"></div>
+            <nav class="transparent-menu">
+                <ul>
+                    <li><a href="avt.html">Регистрация</a></li>
+                    <li><a href="tex.html">Услуги</a></li>
+                    <li><a href="bvg.html">Личный кабинет</a></li>
+                </ul>
+            </nav>
+        <footer>
+                <p>© 2024 Личный кабинет кота</p>
+            </footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+    const menu = document.querySelector(".transparent-menu");
+    const menuOffset = menu.offsetTop;
+    let lastScrollY = 0;
+
+    window.addEventListener("scroll", function () {
+        const currentScrollY = window.pageYOffset;
+
+        if (currentScrollY > menuOffset) {
+            menu.classList.add("fixed");
+            if (currentScrollY > lastScrollY) {
+                menu.classList.add("hidden"); // Скрываем меню при прокрутке вниз
+            } else {
+                menu.classList.remove("hidden"); // Показываем меню при прокрутке вверх
+            }
+        } else {
+            menu.classList.remove("fixed");
+            menu.classList.remove("hidden");
+        }
+
+        lastScrollY = currentScrollY;
+    });
+});
+const circle = document.getElementById("circle");
+
+document.addEventListener("mousemove", (e) => {
+  circle.style.left = e.clientX - 10 + "px";
+  circle.style.top = e.clientY - 10 + "px";
+});
+const numSnowflakes = 100;
+
+for (let i = 0; i < numSnowflakes; i++) {
+  const snowflake = document.createElement("div");
+  snowflake.classList.add("snowflake");
+  snowflake.style.left = Math.random() * 100 + "vw";
+  snowflake.style.animationDelay = Math.random() * 5 + "s";
+  document.body.appendChild(snowflake);
+}
+        </script>
+        
+    </body>
+    </html>
